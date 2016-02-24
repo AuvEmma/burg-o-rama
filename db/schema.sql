@@ -34,14 +34,10 @@ CREATE TABLE orders(
   order_id serial PRIMARY KEY UNIQUE,
   meat_id  integer REFERENCES meats,
   bun_id integer REFERENCES buns,
+  cheese_id integer REFERENCES cheeses,
   doneness VARCHAR(255)
 );
 
-CREATE TABLE cheeses_orders_join (
-       order_id integer REFERENCES orders,
-       cheese_id integer REFERENCES cheeses,
-       PRIMARY KEY (order_id, cheese_id)
-);
 
 CREATE TABLE toppings_orders_join (
        order_id integer REFERENCES orders,
