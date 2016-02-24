@@ -84,7 +84,7 @@ burgers.route('/:burgerID')
     burgerData[bID] = '';
     res.redirect('./' + bID)
   })
-
+//not completely delete but assign value to null
 
 
 module.exports = burgers;
